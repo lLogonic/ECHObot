@@ -1,4 +1,5 @@
 import telebot
+import telebot.types
 from telebot.types import Message
 #from telebot import apihelper
 
