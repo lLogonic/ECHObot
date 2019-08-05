@@ -2,7 +2,7 @@ import telebot
 from telebot.types import Message
 #from telebot import apihelper
 
-TOKEN = '813774917:AAExaw10mz2pJN24nd18gzwo4B22wmAAs3g'
+TOKEN = '756924458:AAEERMi3cF4X0SWR0pfejprNz4WeMCGQL3g'
 #PROXY =
 
 
