@@ -1,4 +1,5 @@
 import telebot
+from telebot.types import Message
 #from telebot import apihelper
 
 TOKEN = '756924458:AAEERMi3cF4X0SWR0pfejprNz4WeMCGQL3g'
@@ -9,13 +10,9 @@ TOKEN = '756924458:AAEERMi3cF4X0SWR0pfejprNz4WeMCGQL3g'
 
 bot = telebot.TeleBot(TOKEN)
 
-@bot.message_handler(commands = ['/start'])
-def handle_start(message):
-	pass
-
 @bot.message_handler(content_types = ["text"])
-def mess(message):
-	bot.send.message(message.chat.id, message.text)
+def mess(message: Message):
+	bot.reply_to(message, message.text.upper())
 
-if __name__ == '__main__':
+
 	bot.polling(none_stop = True)
