@@ -9,9 +9,13 @@ TOKEN = '756924458:AAEERMi3cF4X0SWR0pfejprNz4WeMCGQL3g'
 
 bot = telebot.TeleBot(TOKEN)
 
-@bot.message_handler(content_types=["text"])
-def repeat_all_messages(message): 
-    bot.send_message(message.chat.id, message.text)
+@bot.message_handler(commands = ['/start'])
+def handle_start(message):
+	pass
+
+@bot.message_handler(content_types = ["text"])
+def mess(message):
+	bot.send.message(message.chat.id, message.text)
 
 if __name__ == '__main__':
-	bot.polling(none_stop=True)
+	bot.polling(none_stop = True)
